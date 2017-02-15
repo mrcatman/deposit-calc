@@ -34,7 +34,8 @@ int main() {
                 }
             }
 		}
-		printf("Процент по вкладу: %d \n",percent);
+		sum = sum + (sum/100*percent);
+		printf("Итоговая сумма вклада: %d руб. \n",sum);
 	} else {
 		printf("Данные введены некорректно\n");
 	}
