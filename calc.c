@@ -1,6 +1,7 @@
 #include <stdio.h>
+
 int main() {
-	int sum,time,percent;	
+	int sum,income,time,percent;	
 	printf("Введите сумму вклада (в рублях) и его срок (в днях)\n");
 	printf("Максимальный срок вклада - 365 дней\n");
 	scanf("%d %d",&sum,&time);
@@ -25,6 +26,9 @@ int main() {
             } else {
                 if (time<121) {
                     percent=3;
+                    if (time==120) {
+                    	printf("Бинго! \n");
+                    }
                 } else {
                     if (time<241) {
                         percent=8;
@@ -34,8 +38,10 @@ int main() {
                 }
             }
 		}
-		sum = sum + (sum/100*percent);
+		income = sum/100*percent;
+		sum = sum + income;
 		printf("Итоговая сумма вклада: %d руб. \n",sum);
+		printf("Доход по вкладу: %d руб. \n",income);
 	} else {
 		printf("Данные введены некорректно\n");
 	}
