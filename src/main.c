@@ -11,4 +11,5 @@ int main() {
 	} else {
 		printf("Данные введены некорректно\n");
 	}
+	return 0;
 }
