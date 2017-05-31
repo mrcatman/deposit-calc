@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := calc
 calc: src/main.c src/deposit.c
-	gcc -Wall -Werror -c src/main.c -o build/src/main.o && gcc -Wall -Werror -c src/deposit.c -o build/src/deposit.o && gcc build/src/main.o build/src/deposit.o -o bin/deposit-calc
+	mkdir -p build/src && gcc -Wall -Werror -c src/main.c -o build/src/main.o && gcc -Wall -Werror -c src/deposit.c -o build/src/deposit.o && gcc build/src/main.o build/src/deposit.o -o bin/deposit-calc
 clean: build/deposit.o build/main.o
 	rm build/src/deposit.o build/src/main.o
 testing:
